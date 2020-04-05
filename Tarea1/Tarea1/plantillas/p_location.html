@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Name: {{lugar.name}}</h1>
+        <p>Type: {{lugar.type}}</p>
+        <p>Dimension: {{lugar.dimension}}</p>
+        <p>Residentes:</p>
+        {% for persona in lugar.residentes %}
+            <ul><a href="../../personaje/{{persona.id}}">{{persona.nombre}}</a></ul>
+        {% endfor %}
+    </body>
+</html>

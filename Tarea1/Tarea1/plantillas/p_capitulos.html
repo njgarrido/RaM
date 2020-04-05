@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <table>
+            <tr>
+                <td><h1>Name</h1></td>
+                <td><h1>Fecha</h1></td>
+                <td><h1>Codigo</h1></td>
+            </tr>
+            {% for capitulo in capitulos %}
+                <tr>
+                    <td><a href="../episodios/{{capitulo.id}}">{{capitulo.name}}</a></td>
+                    <td>{{capitulo.air_date}}</td>
+                    <td>{{capitulo.episode}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

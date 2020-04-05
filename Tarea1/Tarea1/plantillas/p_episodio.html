@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Name: {{episodio.name}}</h1>
+        <p>Air Date: {{episodio.air_date}}</p>
+        <p>Episode: {{episodio.episode}}</p>
+        <p>Personajes:</p>
+        {% for persona in episodio.personajes %}
+            <ul><a href="../../personaje/{{persona.id}}">{{persona.nombre}}</a></ul>
+        {% endfor %}
+    </body>
+</html>

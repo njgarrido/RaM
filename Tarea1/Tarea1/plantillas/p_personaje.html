@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Name: {{personaje.name}}</h1>
+        <p>Status: {{personaje.status}}</p>
+        <p>Species: {{personaje.species}}</p>
+        <p>Type: {{personaje.type}}</p>
+        <p>Gender: {{personaje.gender}}</p>
+        <p>Origin: <a href="../../location/{{personaje.nombre_origin.id}}">{{personaje.nombre_origin.nombre}}</a></p>
+        <p>Location: <a href="../../location/{{personaje.nombre_location.id}}">{{personaje.nombre_location.nombre}}</a></p>
+        <p>Episodes:</p>
+        {% for episodio in personaje.episodes %}
+            <ul><a href="../../episodios/{{episodio.id}}">{{episodio.nombre}}</a></ul>
+        {% endfor %}
+        <p>Image: </p>
+        <img src="{{personaje.image}}">
+    </body>
+</html>
